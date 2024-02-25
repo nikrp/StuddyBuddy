@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-grow {
+    animation: grow 0.25s ease-in-out;
+}
+
+.animate-opacity-change {
+    animation: opacity-change 0.1s ease-in-out;
+}
+
+.animate-opacity-change-op {
+    animation: -opacity-change 0.5s ease-in-out;
+}
+
+.animate-shrink {
+    animation: shrink 0.2s ease-in-out;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0%);
+        opacity: 0;
+    } to {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-change {
+    from {
+        opacity: 0;
+    } to  {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(100%);
+        opacity: 1;
+    } to {
+        transform: scale(0%);
+        opacity: 0;
+    }
+}
+
+@keyframes -opacity-change {
+    from {
+        opacity: 0.5;
+    } to  {
+        opacity: 0;
+    }
+}
